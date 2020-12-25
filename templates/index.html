@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Test</title>
+        <style>
+            * {
+                margin: 0;
+            }
+            h3 {
+                margin: 10px;
+                color: lightblue;
+                font-weight: 300;
+                font-size: 20px;
+            }
+            hr {
+                border-bottom: 1px solid lightblue;
+                margin-bottom: 10px;
+                opacity: .3;
+            }
+            body {
+                text-align: center;
+            }
+            #text {
+                padding: 2%;
+                width: 70%;
+                outline: none;
+                border: 1px solid lightblue;
+            }
+            textarea {
+                width: 90%;
+                border: 1px solid lightblue;
+                font-size: {{fz}}px;
+            }
+            #topping {
+                width: 10%;
+                border: 1px solid lightblue;
+                padding: 2%;
+                outline: none;
+            }
+            #submit {
+                margin: 10px;
+                margin-bottom: 20px;
+                border: 2px solid lightblue;
+                background-color: lightblue;
+                padding: 2% 5%;
+                box-shadow: 0 5px 5px silver;
+                border-radius: 5px;
+                color: white;
+                outline: none;
+            }
+            #submit:active {
+                margin-top: 15px;
+                box-shadow: none;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Figley</h3>
+        <hr>
+        <form method="post">
+            <input type="text" autocomplete="off" name="text" id="text" placeholder="input text in here..." />
+            <input type="text" name="topping" maxlength="1" id="topping" value="$"><br>
+            <input type="submit" name="submit" id="submit" value="submit" />
+            <textarea rows="5">
+{{ output[0] }}
+{{ output[1] }}
+{{ output[2] }}
+{{ output[3] }}
+{{ output[4] }}
+            </textarea>
+        </form>
+    </body>
+</html>
